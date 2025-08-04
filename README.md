@@ -40,9 +40,19 @@ cbir_project/
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate sous Windows
 
-pip install -r requirements.txt
-python run.py
-streamlit run streamlit_app/main.py
+1- pip install -r requirements.txt
+
+
+
+
+2- python run.py
+# Lors de l'exécution de ce script, les quatre fichiers .npy seront recréés automatiquement,
+# y compris les deux fichiers volumineux (combined_features.npy et bit_features.npy)
+# qui n'ont pas été inclus dans le projet en raison de leur taille dépassant la limite autorisée par GitHub.
+
+
+
+3- streamlit run streamlit_app/main.py
 
 
 🧪 Technologies utilisées
@@ -61,3 +71,4 @@ Scikit-learn
 📌 Auteur
 
 Mohand Said Halfaoui#
+
