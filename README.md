@@ -1,6 +1,8 @@
+
 #  CBIR - Recherche d'Images Basée sur le Contenu
 
-Application Web de recherche d’images basée sur leur contenu visuel (CBIR) à l’aide de descripteurs d’images (GLCM, Haralick, BiT et combiné). L’interface est développée avec **Streamlit**.
+Application Web de recherche d’images basée sur leur contenu visuel (CBIR) à l’aide de descripteurs d’images (GLCM, Haralick, BiT et combiné).  
+L’interface est développée avec Streamlit.
 
 ---
 
@@ -17,18 +19,19 @@ Application Web de recherche d’images basée sur leur contenu visuel (CBIR) à
 
 ## 📁 Structure du Projet
 
+```
 cbir_project/
 ├── data/
-│ ├── dataset/ # Dossiers d’images classées
-│ └── features/ # Fichiers .npy contenant les descripteurs extraits
-├── descriptors/ # Fichiers des descripteurs
+│   ├── dataset/             # Dossiers d’images classées
+│   └── features/            # Fichiers .npy contenant les descripteurs extraits
+├── descriptors/             # Fichiers descripteurs (GLCM, Haralick, BiT, combiné)
 ├── streamlit_app/
-│ └── main.py # Interface principale de l’application
-├── utils/ # Authentification, chargement, similarité
-├── run.py # Script pour extraire les caractéristiques
+│   └── main.py              # Interface principale de l’application
+├── utils/                   # Authentification, chargement, similarité
+├── run.py                   # Script pour extraire les caractéristiques
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -38,37 +41,44 @@ cbir_project/
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate sous Windows
+source venv/bin/activate  
+```
 
-1- pip install -r requirements.txt
+### 2. Installer les dépendances
 
+```bash
+pip install -r requirements.txt
+```
 
+### 3. Extraire les caractéristiques
 
+```bash
+python run.py
+```
 
-2- python run.py
-# Lors de l'exécution de ce script, les quatre fichiers .npy seront recréés automatiquement,
-# y compris les deux fichiers volumineux (combined_features.npy et bit_features.npy)
-# qui n'ont pas été inclus dans le projet en raison de leur taille dépassant la limite autorisée par GitHub.
+> Lors de l'exécution de ce script, les quatre fichiers `.npy` seront recréés automatiquement,  
+> y compris les deux fichiers volumineux (`combined_features.npy` et `bit_features.npy`)  
+> qui n'ont pas été inclus dans le projet en raison de leur taille dépassant la limite autorisée par GitHub.
 
+### 4. Lancer l’application Streamlit
 
+```bash
+streamlit run streamlit_app/main.py
+```
 
-3- streamlit run streamlit_app/main.py
+---
 
+## 🧪 Technologies utilisées
 
-🧪 Technologies utilisées
-Python 3.10+
+- Python 3.10+
+- OpenCV
+- NumPy
+- Streamlit
+- Mahotas
+- Scikit-learn
 
-OpenCV
+---
 
-NumPy
+## 👤 Auteur
 
-Streamlit
-
-Mahotas
-
-Scikit-learn
-
-📌 Auteur
-
-Mohand Said Halfaoui#
-
+**Mohand Said Halfaoui**
